@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let book of products">
+      <div class="card mx-1 my-3 h-60">
+        <img src="assets/img/{{book.surname}}.jpg" alt="Card image cap" class="card-img img-fluid p-2">
+        <div class="card-body">
+          <h5 class="card-title">Books</h5>
+          <p>
+            <span class="card-text fa fa-star mr-3 text-info"></span>{{book.title}}</p>
+          <p>
+            <span class="card-text fa fa-star mr-3 text-info"></span>{{book.price|currency}}</p>
+          <p class="card-text"><small class="text-muted float-right">{{'by ' + book.surname}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-warning btn-block mb-5" routerLink="/product"> Continue Shopping </button>
+  <button class="btn btn-warning btn-block mb-5" *ngIf="isCartExist()" routerLink="/checkout"> Check Out </button>
+  <button class="btn btn-warning btn-block mb-5" (click)="clearCart()"> Clear Cart</button>
+
+</div>

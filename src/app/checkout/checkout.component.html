@@ -1,0 +1,13 @@
+
+<div class="container">
+  <h1 class="display-3 text-muted">Check Out View! Thanks! You have ordered:</h1>
+
+  <div class="row" *ngFor="let book of products">
+    <div class="col-md-3">
+        <p>Book Title : &nbsp;{{book.title}}</p>
+        <p>Book Title : &nbsp;{{book.price}}</p>
+    </div>
+  </div>
+  <p>Total Price &nbsp;</p> <span>{{totalPrice|currency:'USD'}}</span>
+
+</div>
